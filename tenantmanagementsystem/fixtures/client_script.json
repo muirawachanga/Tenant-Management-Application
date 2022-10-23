@@ -1,0 +1,28 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Item",
+  "enabled": 1,
+  "modified": "2022-10-23 00:06:50.095128",
+  "name": "Item-Form",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "script": "cur_frm.add_fetch(\"property\", \"property_name\", \"property_name\");\nfrappe.ui.form.on(\"Item\", {refresh: function(frm){\nconsole.log(frm);\nif(frm.doc.__islocal) {\n    frm.set_value(\"is_stock_item\", 0);\n    frm.set_value(\"is_purchase_item\", 0);\n    \n}\n    \n},\nproperty: function(frm) {\n    if (frm.doc.property) {\n        frappe.model.get_value(\"Property\", frm.doc.property, \"property_name\", \n        function(value) {\n            if (!frm.doc.item_code) {frm.set_value(\"item_code\", value.property_name + \"-\");\n                \n            } else {\n                var ic = frm.doc.item_code;\n                var pos = ic.indexOf('-');\n                if(pos > -1){\n                    ic = ic.slice(pos+1);\n                    \n                }\n              frm.set_value(\"item_code\", value.property_name + \"-\" + ic);\n              frm.set_value(\"item_name\", value.property_name + \"-\" + ic);\n              frm.set_value(\"description\", ic);\n              \n            }\n          frm.set_value(\"is_stock_item\", 0); \n      \n        });\n      frappe.model.get_value(\"Property\", frm.doc.property, \"trust_fund_account\", function(value) {\n          frm.set_value(\"income_account\", value.trust_fund_account);\n          frm.fields_dict[\"income_account\"].df.reqd = 1;});\n          \n      frappe.model.get_value(\"Property\", frm.doc.property, \"property_cost_center\", function(value) {\n          frm.set_value(\"selling_cost_center\", value.property_cost_center);\n          frm.fields_dict[\"selling_cost_center\"].df.reqd = 1;});\n        \n    } else {\n        frm.set_value(\"item_code\", \"\");\n        frm.set_value(\"item_name\", \"\");\n        frm.set_value(\"is_stock_item\", 1);\n        frm.set_value(\"income_account\", \"\");\n        frm.set_value(\"selling_cost_center\", \"\");\n        frm.fields_dict[\"income_account\"].df.reqd = 0;\n        frm.fields_dict[\"selling_cost_center\"].df.reqd = 0;\n        frm.refresh_fields();\n        \n    }\n    \n}\n    \n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Sales Invoice",
+  "enabled": 1,
+  "modified": "2022-10-23 00:16:45.960382",
+  "name": "Sales Invoice-Form",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "script": "cur_frm.add_fetch(\"tenancy_contract\", \"property_unit_name\", \"property_unit\");\nfrappe.ui.form.on('Sales Invoice', {tenancy_contract: function(frm) {\n    if (frm.doc.docstatus === 0) {\n        cur_frm.add_custom_button(__('Tenancy Contract'), function() {}, __(\"Get items from\"));}\n        frm.events.on_tenancy_contract(frm);},\n        refresh: function(frm) {\n            frm.events.on_tenancy_contract(frm);},\n            on_tenancy_contract: function(frm){\n                if(frm.doc.tenancy_contract){\n                    frm.toggle_reqd('billing_period', 1);\n                    frm.toggle_enable('billing_period', 1);\n                    frm.events.setup_period_query(frm);\n                    \n                }else{\n                    frm.toggle_reqd('billing_period', 0);\n                    frm.toggle_enable('billing_period', 0);\n                    }\n                \n            },\n            setup_period_query: function(frm){ \n                var me = frm;\n                frappe.model.get_value(\"Tenancy Contract\", frm.doc.tenancy_contract, \"billing_period\", function(value) {\n                console.log(value);\n                me.set_query(\"billing_period\", function() { \n                    return {filters: {\"period_type\": value.billing_period } } \n                    \n                });\n                    \n            });\n                \n        }\n    \n});",
+  "view": "Form"
+ }
+]

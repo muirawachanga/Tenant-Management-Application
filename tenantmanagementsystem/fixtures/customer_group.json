@@ -1,0 +1,36 @@
+[
+ {
+  "accounts": [],
+  "credit_limits": [],
+  "customer_group_name": "Tenants",
+  "default_price_list": "",
+  "docstatus": 0,
+  "doctype": "Customer Group",
+  "is_group": 0,
+  "modified": "2022-10-23 04:27:33.617124",
+  "name": "Tenants",
+  "old_parent": "All Customer Groups",
+  "parent": null,
+  "parent_customer_group": "All Customer Groups",
+  "parentfield": null,
+  "parenttype": null,
+  "payment_terms": null
+ },
+ {
+  "accounts": [],
+  "credit_limits": [],
+  "customer_group_name": "Landlords",
+  "default_price_list": null,
+  "docstatus": 0,
+  "doctype": "Customer Group",
+  "is_group": 0,
+  "modified": "2022-10-23 04:27:12.813516",
+  "name": "Landlords",
+  "old_parent": "All Customer Groups",
+  "parent": null,
+  "parent_customer_group": "All Customer Groups",
+  "parentfield": null,
+  "parenttype": null,
+  "payment_terms": null
+ }
+]
