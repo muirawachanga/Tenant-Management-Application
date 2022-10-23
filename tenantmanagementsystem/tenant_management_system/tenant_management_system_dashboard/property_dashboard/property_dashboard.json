@@ -17,22 +17,18 @@
   {
    "chart": "Property Summary",
    "width": "Full"
-  },
-  {
-   "chart": "Summary",
-   "width": "Half"
   }
  ],
  "creation": "2022-10-24 00:03:23.134808",
- "dashboard_name": "Property Management Dashboard",
+ "dashboard_name": "Property Dashboard",
  "docstatus": 0,
  "doctype": "Dashboard",
  "idx": 0,
- "is_default": 1,
+ "is_default": 0,
  "is_standard": 1,
- "modified": "2022-10-24 00:22:23.976362",
+ "modified": "2022-10-24 00:37:34.087844",
  "modified_by": "Administrator",
  "module": "Tenant Management System",
- "name": "Property Management Dashboard",
+ "name": "Property Dashboard",
  "owner": "Administrator"
 }
