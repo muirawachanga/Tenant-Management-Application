@@ -164,6 +164,19 @@ fixtures = [
             ]
         ],
     },
+    {
+        "dt": "Number Card",
+        "filters": [
+            [
+                "name",
+                "in",
+                [
+                    "Paid Invoices",
+                    "Unpaid Invoices",
+                ],
+            ]
+        ],
+    },
 ]
 
 # Permissions
