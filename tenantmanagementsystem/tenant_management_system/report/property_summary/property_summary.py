@@ -166,7 +166,7 @@ def get_report_summary(data):
         {
             "value": paid_sales_invoice,
             "indicator": "Green"
-            if unpaid_sales_invoice > paid_sales_invoice
+            if unpaid_sales_invoice >= paid_sales_invoice
             else "Red",
             "label": _("Paid Units"),
             "datatype": "Int",
@@ -179,7 +179,7 @@ def get_report_summary(data):
         },
         {
             "value": total_occupied,
-            "indicator": "Green" if total_occupied > total_unoccupied else "Red",
+            "indicator": "Green" if total_occupied <= total_unoccupied else "Red",
             "label": _("Occupied Units"),
             "datatype": "Int",
         },

@@ -117,7 +117,7 @@
    "type": "Link"
   }
  ],
- "modified": "2022-10-23 23:43:37.634948",
+ "modified": "2022-10-24 00:25:40.980823",
  "modified_by": "Administrator",
  "module": "Tenant Management System",
  "name": "Property Management",
@@ -143,6 +143,12 @@
    "label": "Tenancy Contract",
    "link_to": "Tenancy Contract",
    "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": " Property Dashboard",
+   "link_to": "Property Dashboard",
+   "type": "Dashboard"
   }
  ]
 }
