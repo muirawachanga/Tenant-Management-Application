@@ -1,0 +1,27 @@
+[
+ {
+  "description": null,
+  "docstatus": 0,
+  "doctype": "Item Group",
+  "filter_attributes": [],
+  "filter_fields": [],
+  "image": null,
+  "is_group": 0,
+  "item_group_defaults": [],
+  "item_group_name": "Property Charge",
+  "modified": "2022-10-23 04:28:12.148592",
+  "name": "Property Charge",
+  "old_parent": "All Item Groups",
+  "parent": null,
+  "parent_item_group": "All Item Groups",
+  "parentfield": null,
+  "parenttype": null,
+  "route": "all-item-groups/property-charge",
+  "show_in_website": 0,
+  "slideshow": null,
+  "taxes": [],
+  "website_specifications": [],
+  "website_title": null,
+  "weightage": 0
+ }
+]

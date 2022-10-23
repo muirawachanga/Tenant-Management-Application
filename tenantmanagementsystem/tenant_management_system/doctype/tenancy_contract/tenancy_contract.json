@@ -45,7 +45,8 @@
   "taxes",
   "sec74",
   "contract_notes",
-  "amended_from"
+  "amended_from",
+  "workflow_state"
  ],
  "fields": [
   {
@@ -284,12 +285,23 @@
    "fieldtype": "Data",
    "label": "Last Modified By",
    "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "workflow_state",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Workflow State",
+   "no_copy": 1,
+   "options": "Workflow State",
+   "read_only": 1
   }
  ],
+ "is_submittable": 1,
  "links": [],
- "modified": "2022-10-23 04:37:25.281585",
+ "modified": "2022-10-23 23:12:03.437751",
  "modified_by": "Administrator",
-"module": "Tenant Management System",
+ "module": "Tenant Management System",
  "name": "Tenancy Contract",
  "owner": "Administrator",
  "permissions": [
@@ -303,6 +315,7 @@
    "report": 1,
    "role": "Property Manager",
    "share": 1,
+   "submit": 1,
    "write": 1
   },
   {
@@ -315,11 +328,11 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
+   "submit": 1,
    "write": 1
   },
   {
    "create": 1,
-   "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,
