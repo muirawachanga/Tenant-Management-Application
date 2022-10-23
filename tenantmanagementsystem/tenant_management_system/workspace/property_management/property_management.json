@@ -1,7 +1,12 @@
 {
  "category": "Modules",
- "charts": [],
- "charts_label": "",
+ "charts": [
+  {
+   "chart_name": "Property Summary",
+   "label": "Property Summary"
+  }
+ ],
+ "charts_label": "Property Summary",
  "creation": "2022-10-23 03:11:43.159450",
  "developer_mode_only": 0,
  "disable_user_customization": 0,
@@ -112,7 +117,7 @@
    "type": "Link"
   }
  ],
- "modified": "2022-10-23 20:49:11.041889",
+ "modified": "2022-10-23 23:43:37.634948",
  "modified_by": "Administrator",
  "module": "Tenant Management System",
  "name": "Property Management",
