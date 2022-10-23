@@ -70,6 +70,101 @@ app_license = "MIT"
 # See frappe.core.notifications.get_notification_config
 
 # notification_config = "tenantmanagementsystem.notifications.get_notification_config"
+fixtures = [
+    {
+        "dt": "Client Script",
+        "filters": [
+            ["name", "in", ["Sales Invoice-Form", "Item-Form"]]
+        ],
+    },
+    {
+        "dt": "Custom Field",
+        "filters": [
+            [
+                "name",
+                "in",
+                [
+                    "Item-property",
+                    "Item-property_name",
+                    "Item-col_prop",
+                    "Item-select_property",
+                    "Sales Invoice-tenancy_contract",
+                    "Sales Invoice-billing_period",
+                    "Sales Invoice-arrears_note",
+                    "Sales Invoice Item-remit_full_amount",
+                    "Sales Invoice Item-remittable",
+                    "Sales Invoice-property_unit",
+                    "Purchase Invoice Item-not_landlord_expense",
+                    "Purchase Invoice-owner_contract",
+                    "Employee-assigned_property_unit",
+                    "Employee-assigned_property",
+                    "Sales Invoice-property_name",
+                ],
+            ]
+        ],
+    },
+    {"dt": "Customer Group", "filters": [["name", "in", ["Tenants", "Landlords"]]]},
+    {
+        "dt": "Notification",
+        "filters": [
+            [
+                "name",
+                "in",
+                [
+                    "15 Days - Tenancy Contract Expiry Alert",
+                    "1 Day - Tenancy Contract Expiry Alert",
+                    "Tenancy Contract Ended",
+                    "2 Days - Tenancy Contract Expiry Alert",
+                    "5 Days - Tenancy Contract Expiry Alert",
+                    "10 Days - Tenancy Contract Expiry Alert",
+                    "30 Days - Tenancy Contract Expiry Alert",
+                ],
+            ]
+        ],
+    },
+    {"dt": "Item Group", "filters": [["name", "in", ["Property Charge"]]]},
+    {
+        "dt": "Workflow",
+        "filters": [["name", "in", ["Tenancy Contract", "Owner Contract"]]],
+    },
+    {
+        "dt": "Workflow Action Master",
+        "filters": [
+            [
+                "name",
+                "in",
+                [
+                    "Cancel",
+                    "Suspend",
+                    "Terminate",
+                    "Review",
+                    "Reject",
+                    "Approve",
+                    "Activate",
+                ],
+            ]
+        ],
+    },
+    {
+        "dt": "Workflow State",
+        "filters": [
+            [
+                "name",
+                "in",
+                [
+                    "Rejected",
+                    "Approved",
+                    "Pending",
+                    "New",
+                    "Suspended",
+                    "Cancelled",
+                    "Terminated",
+                    "Active",
+                ],
+            ]
+        ],
+    },
+]
 
 # Permissions
 # -----------
@@ -102,6 +197,14 @@ app_license = "MIT"
 # 		"on_trash": "method"
 #	}
 # }
+
+doc_events = {
+    "Sales Invoice": {
+        "before_insert": "tenantmanagementsystem.tenant_management_system.hooks.doc_hooks.sales_invoice_arrears",
+        "before_submit": "tenantmanagementsystem.tenant_management_system.hooks.doc_hooks.sales_invoice_arrears",
+        "before_cancel": "tenantmanagementsystem.tenant_management_system.hooks.doc_hooks.sales_invoice_cancel",
+    }
+}
 
 # Scheduled Tasks
 # ---------------

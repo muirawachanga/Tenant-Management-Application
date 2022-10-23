@@ -4,7 +4,7 @@
   "doctype": "Workflow",
   "document_type": "Owner Contract",
   "is_active": 1,
-  "modified": "2022-10-23 04:19:58.601762",
+  "modified": "2022-10-23 23:03:26.988204",
   "name": "Owner Contract",
   "override_status": 0,
   "parent": null,
@@ -27,7 +27,7 @@
    },
    {
     "allow_edit": "Property Manager",
-    "doc_status": "0",
+    "doc_status": "1",
     "is_optional_state": 0,
     "message": null,
     "next_action_email_template": null,
@@ -40,7 +40,7 @@
    },
    {
     "allow_edit": "Property Manager",
-    "doc_status": "0",
+    "doc_status": "2",
     "is_optional_state": 0,
     "message": null,
     "next_action_email_template": null,
@@ -53,7 +53,7 @@
    },
    {
     "allow_edit": "Property Manager",
-    "doc_status": "0",
+    "doc_status": "1",
     "is_optional_state": 0,
     "message": null,
     "next_action_email_template": null,
@@ -66,7 +66,7 @@
    },
    {
     "allow_edit": "Property Manager",
-    "doc_status": "0",
+    "doc_status": "2",
     "is_optional_state": 0,
     "message": null,
     "next_action_email_template": null,
@@ -156,7 +156,7 @@
   "doctype": "Workflow",
   "document_type": "Tenancy Contract",
   "is_active": 1,
-  "modified": "2022-10-23 04:33:01.215610",
+  "modified": "2022-10-23 23:02:38.364264",
   "name": "Tenancy Contract",
   "override_status": 0,
   "parent": null,
@@ -179,7 +179,7 @@
    },
    {
     "allow_edit": "Property Manager",
-    "doc_status": "0",
+    "doc_status": "1",
     "is_optional_state": 0,
     "message": null,
     "next_action_email_template": null,
@@ -192,7 +192,7 @@
    },
    {
     "allow_edit": "Property Manager",
-    "doc_status": "0",
+    "doc_status": "1",
     "is_optional_state": 0,
     "message": null,
     "next_action_email_template": null,
@@ -205,7 +205,7 @@
    },
    {
     "allow_edit": "Property Manager",
-    "doc_status": "0",
+    "doc_status": "1",
     "is_optional_state": 0,
     "message": null,
     "next_action_email_template": null,
@@ -218,7 +218,7 @@
    },
    {
     "allow_edit": "Property Manager",
-    "doc_status": "0",
+    "doc_status": "2",
     "is_optional_state": 0,
     "message": null,
     "next_action_email_template": null,
