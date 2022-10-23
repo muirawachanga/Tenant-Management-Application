@@ -1,0 +1,217 @@
+{
+ "actions": [],
+ "allow_copy": 1,
+ "autoname": "naming_series:",
+ "creation": "2022-10-23 02:01:01.390891",
+ "description": "Create and manage contracts with property owners",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "sec30",
+  "property",
+  "owner_customer",
+  "commision",
+  "column_break_1",
+  "property_name",
+  "customer_name",
+  "contract_status",
+  "creation_date",
+  "sec32",
+  "modification",
+  "col23",
+  "modification_by",
+  "sec10",
+  "start_date",
+  "end_date",
+  "col10",
+  "termination_date",
+  "cancellation_date",
+  "amended_from",
+  "sec40",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "no_copy": 1,
+   "options": "OWC",
+   "print_hide": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "sec30",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "property",
+   "fieldtype": "Link",
+   "label": "Property",
+   "options": "Property",
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "owner_customer",
+   "fieldtype": "Link",
+   "label": "Owner Supplier",
+   "options": "Supplier",
+   "reqd": 1
+  },
+  {
+   "description": "Commission % to charge the customer for managing this property ",
+   "fieldname": "commision",
+   "fieldtype": "Percent",
+   "label": "Commision",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "bold": 1,
+   "fetch_from": "property.property_name",
+   "fieldname": "property_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Property Name",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "owner_customer.supplier_name",
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Supplier Name",
+   "read_only": 1
+  },
+  {
+   "default": "New",
+   "fieldname": "contract_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Contract Status",
+   "options": "New\nActive\nTerminated\nSuspended\nCancelled\nRejected",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "sec32",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "col23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sec10",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "End Date"
+  },
+  {
+   "fieldname": "col10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "termination_date",
+   "fieldtype": "Date",
+   "label": "Termination Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cancellation_date",
+   "fieldtype": "Date",
+   "label": "Cancellation Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Owner Contract",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "sec40",
+   "fieldtype": "Section Break",
+   "label": "Contract Notes"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "creation_date",
+   "fieldtype": "Datetime",
+   "label": "Creation Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "modification",
+   "fieldtype": "Datetime",
+   "label": "Last Modified",
+   "read_only": 1
+  },
+  {
+   "fieldname": "modification_by",
+   "fieldtype": "Data",
+   "label": "Last Modified By",
+   "read_only": 1
+  }
+ ],
+ "links": [],
+ "modified": "2022-10-23 02:01:01.390891",
+ "modified_by": "Administrator",
+"module": "Tenant Management System",
+ "name": "Owner Contract",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Property Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "property_name"
+}

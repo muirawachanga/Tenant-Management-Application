@@ -1,0 +1,336 @@
+{
+ "actions": [],
+ "allow_copy": 1,
+ "autoname": "naming_series:",
+ "creation": "2022-10-23 04:37:25.281585",
+ "description": "Create and manage tenancy contracts",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "section1",
+  "property_unit",
+  "property_unit_name",
+  "customer",
+  "creation_date",
+  "col1",
+  "property_name",
+  "contract_status",
+  "billing_period",
+  "due_date_days",
+  "section2",
+  "start_date",
+  "termination_date",
+  "col2",
+  "end_date",
+  "cancellation_date",
+  "sec22",
+  "modified_date",
+  "col22",
+  "modification_by",
+  "section3",
+  "date_of_first_billing",
+  "col30",
+  "grace_period",
+  "section150",
+  "auto_generate_invoice",
+  "col40",
+  "email_invoice",
+  "section_ci",
+  "items",
+  "sec34",
+  "taxes_and_charges",
+  "taxes",
+  "sec74",
+  "contract_notes",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "no_copy": 1,
+   "options": "TEC-",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "section1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "description": "Select the unit under this contract",
+   "fieldname": "property_unit",
+   "fieldtype": "Link",
+   "label": "Property Unit",
+   "options": "Property Unit",
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "fetch_from": "property_unit.unit_name",
+   "fieldname": "property_unit_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Property Unit Name",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "description": "Select the customer that this contract applies to",
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Tenancy Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "col1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "bold": 1,
+   "description": "The property associated with this contract",
+   "fieldname": "property_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Property Name",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "default": "New",
+   "fieldname": "contract_status",
+   "fieldtype": "Select",
+   "label": "Contract Status",
+   "options": "New\nActive\nSuspended\nCancelled\nTerminated\nRejected",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "default": "Monthly",
+   "description": "Select the billing period for rent and other items specified in this contract.",
+   "fieldname": "billing_period",
+   "fieldtype": "Select",
+   "label": "Billing Period",
+   "options": "Daily\nWeekly\nFortnightly\nMonthly\nQuarterly\nHalf Yearly\nYearly",
+   "reqd": 1
+  },
+  {
+   "default": "4",
+   "description": "Number of days until an invoice under this contract becomes due. Default is 4 Days of 5th of each month for Monthly billing period.",
+   "fieldname": "due_date_days",
+   "fieldtype": "Int",
+   "label": "Due Date Days",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "description": "Start date of the contract",
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "description": "Contract termination date if terminated",
+   "fieldname": "termination_date",
+   "fieldtype": "Date",
+   "label": "Termination Date"
+  },
+  {
+   "fieldname": "col2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Contract end date",
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "description": "Contract cancellation date if cancelled",
+   "fieldname": "cancellation_date",
+   "fieldtype": "Date",
+   "label": "Cancellation Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sec22",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "col22",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "description": "Date that the first invoice for this contract will be issued. Normally, it is the same as the start date of the contract",
+   "fieldname": "date_of_first_billing",
+   "fieldtype": "Date",
+   "label": "Date Of First Billing"
+  },
+  {
+   "fieldname": "col30",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "description": "Number of days that the system has to wait before automatically generating an invoice for this contract. For example, if the billing period is Monthly, and this field is set to 0, the invoice will be automatically generated on 1st of each month. If set to 3, the invoice is generated on the 3rd.",
+   "fieldname": "grace_period",
+   "fieldtype": "Int",
+   "label": "Billing Grace Period (Days)"
+  },
+  {
+   "fieldname": "section150",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "description": "Select to automatically generate the invoice for each period",
+   "fieldname": "auto_generate_invoice",
+   "fieldtype": "Check",
+   "label": "Auto Generate Invoice"
+  },
+  {
+   "fieldname": "col40",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "description": "Select to send the invoice automatically by email",
+   "fieldname": "email_invoice",
+   "fieldtype": "Check",
+   "label": "Send Invoice By Email"
+  },
+  {
+   "description": "Default items to be invoiced for this contract. At least the rent item should be selected",
+   "fieldname": "section_ci",
+   "fieldtype": "Section Break",
+   "label": "Contract Billing Items"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Tenancy Contract Items",
+   "options": "Tenancy Contract Item"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "sec34",
+   "fieldtype": "Section Break",
+   "label": "Taxes"
+  },
+  {
+   "fieldname": "taxes_and_charges",
+   "fieldtype": "Link",
+   "label": "Taxes and Charges",
+   "options": "Sales Taxes and Charges Template"
+  },
+  {
+   "fieldname": "taxes",
+   "fieldtype": "Table",
+   "label": "Contract Taxes And Charges",
+   "options": "Sales Taxes and Charges"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "sec74",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "contract_notes",
+   "fieldtype": "Long Text",
+   "label": "Contract Notes"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Tenancy Contract",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "creation_date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Creation Date",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "modified_date",
+   "fieldtype": "Datetime",
+   "label": "Last Modified",
+   "read_only": 1
+  },
+  {
+   "fieldname": "modification_by",
+   "fieldtype": "Data",
+   "label": "Last Modified By",
+   "read_only": 1
+  }
+ ],
+ "links": [],
+ "modified": "2022-10-23 04:37:25.281585",
+ "modified_by": "Administrator",
+"module": "Tenant Management System",
+ "name": "Tenancy Contract",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Property Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Property Management Alerts",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "customer"
+}

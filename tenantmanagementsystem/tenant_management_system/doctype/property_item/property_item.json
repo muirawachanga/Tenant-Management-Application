@@ -1,0 +1,79 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2022-10-23 06:38:27.288060",
+ "description": "Create and manage items in a property or a unit. E.g Elevators, Swimming pools, Air Conditioner, Bath tubs, Chairs, Locks etc.",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "property_item",
+  "description",
+  "section1",
+  "status",
+  "column1",
+  "value"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "PIT-",
+   "reqd": 1
+  },
+  {
+   "description": "Select the general item that this property item represents",
+   "fieldname": "property_item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Property Item",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "description": "Description of the property item. E.g Bedroom air conditioner",
+   "fetch_from": "property_item.description",
+   "fetch_if_empty": 1,
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "section1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Good",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Good\nFaulty\nScrapped",
+   "reqd": 1
+  },
+  {
+   "description": "Value of the item in currency if known",
+   "fieldname": "value",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Value"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2022-10-23 06:38:27.288060",
+ "modified_by": "Administrator",
+"module": "Tenant Management System",
+ "name": "Property Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "property_item"
+}

@@ -1,0 +1,244 @@
+{
+ "actions": [],
+ "allow_copy": 1,
+ "allow_import": 1,
+ "autoname": "naming_series:",
+ "creation": "2022-10-23 01:49:48.712442",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "property",
+  "col44",
+  "property_name",
+  "sec10",
+  "property_unit",
+  "tenancy_contract",
+  "col10",
+  "property_unit_name",
+  "customer_name",
+  "sec30",
+  "utility_item",
+  "col34",
+  "measurement_status",
+  "sec20",
+  "reading_date",
+  "billing_period",
+  "is_opening_entry",
+  "col20",
+  "meter_reading",
+  "usage_units",
+  "monetary_amount",
+  "sec40",
+  "billing_invoice",
+  "billing_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "no_copy": 1,
+   "options": "UTL-",
+   "read_only": 1
+  },
+  {
+   "fieldname": "property",
+   "fieldtype": "Link",
+   "label": "Property",
+   "no_copy": 1,
+   "options": "Property",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "col44",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "property_name",
+   "fieldtype": "Data",
+   "label": "Property Name",
+   "no_copy": 1,
+   "read_only": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "sec10",
+   "fieldtype": "Section Break"
+  },
+  {
+   "bold": 1,
+   "fieldname": "property_unit",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Property Unit",
+   "no_copy": 1,
+   "options": "Property Unit",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "tenancy_contract",
+   "fieldtype": "Link",
+   "label": "Tenancy Contract",
+   "no_copy": 1,
+   "options": "Tenancy Contract",
+   "read_only": 1,
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "col10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "bold": 1,
+   "fieldname": "property_unit_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Property Unit Name",
+   "no_copy": 1,
+   "read_only": 1,
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Customer Name",
+   "no_copy": 1,
+   "read_only": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "sec30",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "utility_item",
+   "fieldtype": "Link",
+   "label": "Utility Item",
+   "no_copy": 1,
+   "options": "Utility Item",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "col34",
+   "fieldtype": "Column Break"
+  },
+  {
+   "bold": 1,
+   "default": "New",
+   "fieldname": "measurement_status",
+   "fieldtype": "Select",
+   "label": "Measurement Status",
+   "no_copy": 1,
+   "options": "New\nBilled\nCancelled",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "sec20",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "reading_date",
+   "fieldtype": "Date",
+   "label": "Reading Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "billing_period",
+   "fieldtype": "Link",
+   "label": "Billing Period",
+   "options": "Billing Period",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_opening_entry",
+   "fieldtype": "Check",
+   "label": "Is Opening Entry"
+  },
+  {
+   "fieldname": "col20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "bold": 1,
+   "fieldname": "meter_reading",
+   "fieldtype": "Float",
+   "label": "Meter Reading"
+  },
+  {
+   "bold": 1,
+   "fieldname": "usage_units",
+   "fieldtype": "Float",
+   "label": "Usage Units"
+  },
+  {
+   "bold": 1,
+   "fieldname": "monetary_amount",
+   "fieldtype": "Currency",
+   "label": "Monetary Amount"
+  },
+  {
+   "fieldname": "sec40",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "billing_invoice",
+   "fieldtype": "Link",
+   "label": "Billing Invoice",
+   "options": "Sales Invoice",
+   "read_only": 1
+  },
+  {
+   "fieldname": "billing_date",
+   "fieldtype": "Date",
+   "label": "Billing Date",
+   "read_only": 1
+  }
+ ],
+ "links": [],
+ "modified": "2022-10-23 01:49:48.712442",
+ "modified_by": "Administrator",
+"module": "Tenant Management System",
+ "name": "Utility Item Measurement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Property Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "property_unit_name"
+}

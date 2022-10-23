@@ -1,0 +1,74 @@
+{
+ "actions": [],
+ "creation": "2022-10-23 00:22:58.264556",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "lock_tenancy_contract_items",
+  "default_management_fee_item",
+  "default_expense_reimbursement_item",
+  "automatic_invoice_generation_date"
+ ],
+ "fields": [
+  {
+   "default": "1",
+   "description": "If checked, user cannot add or remove Tenancy Contract billing items when the contract is active.",
+   "fieldname": "lock_tenancy_contract_items",
+   "fieldtype": "Check",
+   "label": "Lock Tenancy Contract Items"
+  },
+  {
+   "description": "Select the item to be used for Management Fee invoices to property owners",
+   "fieldname": "default_management_fee_item",
+   "fieldtype": "Link",
+   "label": "Default Management Fee Item",
+   "options": "Item"
+  },
+  {
+   "description": "Select the item to be used to charge Expense Reimbursements on invoices to property owners",
+   "fieldname": "default_expense_reimbursement_item",
+   "fieldtype": "Link",
+   "label": "Default Expense Reimbursement Item",
+   "options": "Item"
+  },
+  {
+   "fieldname": "automatic_invoice_generation_date",
+   "fieldtype": "Int",
+   "label": "Automatic Invoice Generation Date"
+  }
+ ],
+ "icon": "icon-cog",
+ "issingle": 1,
+ "links": [],
+ "modified": "2022-10-23 00:22:58.264556",
+ "modified_by": "Administrator",
+"module": "Tenant Management System",
+ "name": "Property Management Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Property Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

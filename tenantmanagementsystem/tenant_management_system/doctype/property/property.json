@@ -1,0 +1,207 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "naming_series:",
+ "creation": "2022-10-23 01:36:22.056812",
+ "description": "Create and manage properties",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "main_section",
+  "property_name",
+  "description",
+  "land_ref_no",
+  "column1",
+  "type",
+  "physical_address",
+  "number_of_floors",
+  "company",
+  "section2",
+  "parent_cost_center",
+  "col2",
+  "property_cost_center",
+  "section3",
+  "trust_fund_account",
+  "section_pi",
+  "property_items",
+  "assigned_employee_section",
+  "employee_assigned",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "no_copy": 1,
+   "options": "PRO-",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "main_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "bold": 1,
+   "fieldname": "property_name",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "label": "Property Name",
+   "no_copy": 1,
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "land_ref_no",
+   "fieldtype": "Data",
+   "label": "Land Ref Number"
+  },
+  {
+   "fieldname": "column1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Type",
+   "options": "Property Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "physical_address",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Physical Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "number_of_floors",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Number of Floors"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section2",
+   "fieldtype": "Section Break",
+   "label": "Cost Center"
+  },
+  {
+   "description": "Select the Parent Cost Center that will be used to group all Property Cost Centers. Normally, this is called 'Property Management' If it does not exist, you may create it.",
+   "fieldname": "parent_cost_center",
+   "fieldtype": "Link",
+   "label": "Parent Cost Center",
+   "options": "Cost Center"
+  },
+  {
+   "fieldname": "col2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "The Cost Center is used to track entries related to this property and is useful for management reports and analytical analysis. This is created automatically after you select the Parent Cost Center",
+   "fieldname": "property_cost_center",
+   "fieldtype": "Link",
+   "label": "Property Cost Center",
+   "options": "Cost Center"
+  },
+  {
+   "fieldname": "section3",
+   "fieldtype": "Section Break",
+   "label": "Accounting"
+  },
+  {
+   "description": "Select the financial account that will hold the funds collected from this property on the landlords behalf. This is normally a Liability account",
+   "fieldname": "trust_fund_account",
+   "fieldtype": "Link",
+   "label": "Trust Fund Account",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "collapsible": 1,
+   "description": "Property Items belonging to this property",
+   "fieldname": "section_pi",
+   "fieldtype": "Section Break",
+   "label": "Property Items"
+  },
+  {
+   "fieldname": "property_items",
+   "fieldtype": "Table",
+   "label": "Property Items",
+   "options": "Property Item"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Property",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "assigned_employee_section",
+   "fieldtype": "Section Break",
+   "label": "Assigned Employees"
+  },
+  {
+   "fieldname": "employee_assigned",
+   "fieldtype": "Table",
+   "label": "Employee Assigned",
+   "options": "Employee Group Table"
+  }
+ ],
+ "links": [],
+ "modified": "2022-10-23 13:59:30.403992",
+ "modified_by": "Administrator",
+"module": "Tenant Management System",
+ "name": "Property",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Property Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "property_name, type,physical_address,land_ref_no",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "property_name"
+}
