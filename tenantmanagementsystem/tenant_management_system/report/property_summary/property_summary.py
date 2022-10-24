@@ -92,6 +92,12 @@ def get_columns():
             "width": 200,
         },
         {
+            "fieldname": "property_name",
+            "label": _("Property Name"),
+            "fieldtype": "Data",
+            "width": 200,
+        },
+        {
             "fieldname": "type",
             "label": _("Type"),
             "fieldtype": "Link",

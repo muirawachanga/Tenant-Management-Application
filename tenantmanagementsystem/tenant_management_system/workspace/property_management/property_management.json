@@ -115,9 +115,26 @@
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reports and Dashboard",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Property Report",
+   "link_to": "Property Summary",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2022-10-24 00:25:40.980823",
+ "modified": "2022-10-24 09:29:11.107403",
  "modified_by": "Administrator",
  "module": "Tenant Management System",
  "name": "Property Management",
