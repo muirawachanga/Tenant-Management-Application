@@ -9,7 +9,6 @@ from frappe.model.document import Document
 
 
 class Property(Document):
-
     def validate(self):
         if not self.property_cost_center:
             self.create_cost_center()
