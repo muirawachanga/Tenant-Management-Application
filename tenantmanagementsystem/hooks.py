@@ -44,7 +44,7 @@ app_license = "MIT"
 
 # website user home page (by Role)
 # role_home_page = {
-#	"Role": "home_page"
+# 	"Role": "home_page"
 # }
 
 # Generators
@@ -73,9 +73,7 @@ app_license = "MIT"
 fixtures = [
     {
         "dt": "Client Script",
-        "filters": [
-            ["name", "in", ["Sales Invoice-Form", "Item-Form"]]
-        ],
+        "filters": [["name", "in", ["Sales Invoice-Form", "Item-Form"]]],
     },
     {
         "dt": "Custom Field",
@@ -166,16 +164,7 @@ fixtures = [
     },
     {
         "dt": "Number Card",
-        "filters": [
-            [
-                "name",
-                "in",
-                [
-                    "Paid Invoices",
-                    "Unpaid Invoices",
-                ],
-            ]
-        ],
+        "filters": [["name", "in", ["Paid Invoices", "Unpaid Invoices",],]],
     },
 ]
 
@@ -208,7 +197,7 @@ fixtures = [
 # 		"on_update": "method",
 # 		"on_cancel": "method",
 # 		"on_trash": "method"
-#	}
+# 	}
 # }
 
 doc_events = {
@@ -294,4 +283,3 @@ doc_events = {
 # auth_hooks = [
 # 	"tenantmanagementsystem.auth.validate"
 # ]
-

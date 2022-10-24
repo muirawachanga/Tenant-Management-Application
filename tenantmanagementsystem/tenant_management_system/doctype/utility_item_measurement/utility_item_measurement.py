@@ -10,7 +10,6 @@ from frappe.utils import flt
 
 
 class UtilityItemMeasurement(Document):
-    
     def set_billed(self, invoice):
         """ Sets the invoice that billed this item and updates to billed """
         self.set("billing_invoice", invoice.get("name"))

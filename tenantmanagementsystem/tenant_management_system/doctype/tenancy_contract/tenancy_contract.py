@@ -13,7 +13,6 @@ from datetime import timedelta
 
 
 class TenancyContract(Document):
-
     def validate(self):
         self.validate_property_unit()
         self.validate_items()
