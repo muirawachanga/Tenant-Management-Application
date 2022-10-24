@@ -1,0 +1,109 @@
+{
+ "actions": [],
+ "autoname": "field:item_name",
+ "creation": "2022-10-23 01:17:57.810701",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_name",
+  "col10",
+  "measurement_type",
+  "sec10",
+  "minimum_charge",
+  "col20",
+  "minimum_charge_units",
+  "sec20",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "item_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item Name",
+   "no_copy": 1,
+   "options": "Item",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "col10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "measurement_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Measurement Type",
+   "options": "\nMeter Reading\nUsage Units\nMonetary Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sec10",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "minimum_charge",
+   "fieldtype": "Currency",
+   "label": "Minimum Charge"
+  },
+  {
+   "fieldname": "col20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "description": "The quantity of units below which the minimum charge will apply.",
+   "fieldname": "minimum_charge_units",
+   "fieldtype": "Int",
+   "label": "Minimum Charge Units"
+  },
+  {
+   "fieldname": "sec20",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  }
+ ],
+ "links": [],
+ "modified": "2022-10-23 01:17:57.810701",
+ "modified_by": "Administrator",
+"module": "Tenant Management System",
+ "name": "Utility Item",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Property Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "item_name"
+}

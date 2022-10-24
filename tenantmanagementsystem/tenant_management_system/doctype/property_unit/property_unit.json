@@ -1,0 +1,161 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "naming_series:",
+ "creation": "2022-10-23 01:41:48.228443",
+ "description": "Create and manage property units",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "section1",
+  "property",
+  "unit_name",
+  "unit_type",
+  "column1",
+  "property_name",
+  "floor_area",
+  "floor_number",
+  "items_section",
+  "property_items",
+  "section_emp",
+  "employees_assigned",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "no_copy": 1,
+   "options": "PUN-",
+   "print_hide": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "section1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "property",
+   "fieldtype": "Link",
+   "label": "Property",
+   "options": "Property",
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "unit_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Unit name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "unit_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Unit Type",
+   "options": "Residential\nCommercial",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "bold": 1,
+   "fetch_from": "property.property_name",
+   "fieldname": "property_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Property Name",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "floor_area",
+   "fieldtype": "Int",
+   "label": "Floor Area (Square Meters)"
+  },
+  {
+   "default": "1",
+   "fieldname": "floor_number",
+   "fieldtype": "Int",
+   "label": "Floor Number",
+   "reqd": 1
+  },
+  {
+   "collapsible": 1,
+   "description": "Property Items belonging to this unit",
+   "fieldname": "items_section",
+   "fieldtype": "Section Break",
+   "label": "Property Items"
+  },
+  {
+   "fieldname": "property_items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Property Item"
+  },
+  {
+   "collapsible": 1,
+   "description": "List of employees assigned to this unit",
+   "fieldname": "section_emp",
+   "fieldtype": "Section Break",
+   "label": "Employees Assigned"
+  },
+  {
+   "fieldname": "employees_assigned",
+   "fieldtype": "Table",
+   "label": "Employees Assigned",
+   "options": "Employee Group Table"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Property Unit",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "links": [],
+ "modified": "2022-10-23 01:41:48.228443",
+ "modified_by": "Administrator",
+"module": "Tenant Management System",
+ "name": "Property Unit",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Property Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "unit_name,unit_type,property_name",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "unit_name"
+}

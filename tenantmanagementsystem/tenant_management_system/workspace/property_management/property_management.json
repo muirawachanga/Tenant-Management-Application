@@ -1,0 +1,171 @@
+{
+ "category": "Modules",
+ "charts": [
+  {
+   "chart_name": "Property Summary",
+   "label": "Property Summary"
+  }
+ ],
+ "charts_label": "Property Summary",
+ "creation": "2022-10-23 03:11:43.159450",
+ "developer_mode_only": 0,
+ "disable_user_customization": 0,
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "extends_another_page": 0,
+ "hide_custom": 0,
+ "icon": "retail",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "label": "Property Management",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Property Setup",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Property",
+   "link_to": "Property",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Property Unit",
+   "link_to": "Property Unit",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Contract and Billing",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Tenancy Contract",
+   "link_to": "Tenancy Contract",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Owner/Landlord",
+   "link_to": "Owner Contract",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Utility Item Measurement",
+   "link_to": "Utility Item Measurement",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Setting and Tools",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Billing Period",
+   "link_to": "Billing Period",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Property Setting",
+   "link_to": "Property Management Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Utility Item",
+   "link_to": "Utility Item",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reports and Dashboard",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Property Report",
+   "link_to": "Property Summary",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2022-10-24 09:29:11.107403",
+ "modified_by": "Administrator",
+ "module": "Tenant Management System",
+ "name": "Property Management",
+ "onboarding": "",
+ "owner": "Administrator",
+ "pin_to_bottom": 0,
+ "pin_to_top": 0,
+ "shortcuts": [
+  {
+   "doc_view": "",
+   "label": "Property",
+   "link_to": "Property",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "Property Management Setting",
+   "link_to": "Property Management Settings",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "Tenancy Contract",
+   "link_to": "Tenancy Contract",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": " Property Dashboard",
+   "link_to": "Property Dashboard",
+   "type": "Dashboard"
+  }
+ ]
+}
